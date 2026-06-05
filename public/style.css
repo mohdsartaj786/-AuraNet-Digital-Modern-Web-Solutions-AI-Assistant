@@ -1,0 +1,1086 @@
+/* ==========================================================================
+   1. REAL TECH INDUSTRY DESIGN SYSTEM & DYNAMIC TOKENS
+   ========================================================================== */
+:root {
+  /* Ultra-Premium Light Theme Palette (Stripe/Linear Style) */
+  --bg-primary: #f9fafb;
+  --bg-surface: rgba(255, 255, 255, 0.75);
+  --navbar-bg: rgba(255, 255, 255, 0.7);
+  --text-main: #0c111d;
+  --text-muted: #475467;
+  --text-light: #667085;
+  --border-light: rgba(228, 231, 236, 0.8);
+  
+  /* Brand Accents (Cyber Punk Tech Glow) */
+  --primary: #4f46e5;       /* Electric Indigo */
+  --primary-hover: #3b82f6; /* Cyber Blue */
+  --accent: #d946ef;        /* Neon Purple */
+  --card-light: #f2f4f7;
+  --muted-light: #667085;
+  
+  /* System Signals */
+  --success: #12b76a;
+  --error: #f04438;
+  
+  /* Premium Engineering Metrics */
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --glass-blur: blur(20px);
+  --shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.05);
+  --shadow-md: 0 12px 16px -4px rgba(16, 24, 40, 0.08), 0 4px 6px -2px rgba(16, 24, 40, 0.03);
+}
+
+/* Intelligent Next-Gen Dark Mode Overrides (Vercel/Linear Style) */
+body.dark {
+  --bg-primary: #030303;
+  --bg-surface: rgba(10, 10, 10, 0.7);
+  --navbar-bg: rgba(3, 3, 3, 0.7);
+  --text-main: #f9fafb;
+  --text-muted: #cecfd2;
+  --text-light: #94969c;
+  --border-light: rgba(255, 255, 255, 0.08);
+  --card-light: #141414;
+  --muted-light: #85868c;
+  --shadow-md: 0 20px 24px -4px rgba(0, 0, 0, 0.5), 0 8px 8px -4px rgba(0, 0, 0, 0.3);
+}
+
+/* Base Engine Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.01em; /* Premium typography styling */
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================================================
+   2. APPLE STYLE GLASSMORPHISM NAVBAR
+   ========================================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 8%;
+  background: var(--navbar-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1500;
+  border-bottom: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.logo span {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  padding: 6px 0;
+  transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--text-main);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1.5px;
+  background: var(--text-main);
+  transition: var(--transition);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+  width: 80%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-btn {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.theme-btn:hover {
+  background: var(--card-light);
+  border-color: var(--text-main);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: var(--text-main);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+/* ==========================================================================
+   3. STRIPE STYLE HERO INTERFACE & BUTTONS
+   ========================================================================== */
+.hero, .about-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 8% 80px 8%;
+  text-align: center;
+  position: relative;
+}
+
+.about-hero {
+  min-height: auto;
+  padding: 160px 8% 40px 8%;
+}
+
+/* Real-Industry Typography Scales */
+.hero-content h1, .about-hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(180deg, var(--text-main) 30%, var(--text-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p, .about-hero p {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  max-width: 640px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Silicon Valley Enterprise CTA Buttons */
+.btn {
+  background: var(--text-main);
+  color: var(--bg-primary) !important;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  border: 1px solid var(--text-main);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-main) !important;
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--card-light);
+  border-color: var(--border-light);
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   4. VERCEL GRIDS & PREMIUM GLASS CARD ALIGNMENT MATRIX
+   ========================================================================== */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 4%;
+}
+
+.section-title h1, .section-title h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+}
+
+.section-title p {
+  color: var(--text-light);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services, .stats, .pricing, .tech-stack, .testimonials, .mission-vision, .leadership {
+  padding: 80px 8%;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.services {
+  padding-top: 120px;
+}
+
+/* Industry Responsive Grid */
+.service-grid, .stats-container, .pricing-grid, .testimonial-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* High-End Glassmorphic Card Engine */
+.card, .stat-box, .pricing-card, .testimonial-card, .project-card {
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-light);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left !important;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Numbers/Stats Counter Real Alignment */
+.stats .stat-box, .about-extra .stat-box {
+  text-align: center !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover, .stat-box:hover, .pricing-card:hover, .testimonial-card:hover, .project-card:hover {
+  border-color: rgba(79, 70, 229, 0.4);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Minimalist Tech Icons Framework */
+.card .icon, .leadership .card .icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  background: var(--card-light);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.card:hover .icon {
+  background: var(--primary);
+  color: white;
+}
+
+.card h3, .pricing-card h3, .testimonial-card h4, .project-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+  text-align: left !important;
+}
+
+.card p, .pricing-card p, .testimonial-card p, .project-card p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left !important;
+}
+
+/* Lock Heights System */
+.card p, .pricing-card .plan-features, .project-card p, .testimonial-card p {
+  flex-grow: 1;
+}
+
+.testimonial-card h4 {
+  margin-top: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Numeric Scale Metrics */
+.stat-box h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.04em;
+  margin-bottom: 6px;
+}
+
+.pricing-card h3 {
+  text-align: left !important;
+}
+
+/* ==========================================================================
+   4.1 INDUSTRIAL CASE STUDIES SYSTEM (Projects Page Optimization)
+   ========================================================================== */
+.projects {
+  padding: 120px 8% 80px 8%;
+  width: 100%;
+}
+
+.project-card {
+  padding: 0; /* Clear container spacing for seamless asset layout */
+  overflow: hidden;
+}
+
+/* Infinite Edge Image Masking */
+.project-card .img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--card-light);
+  position: relative;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.project-card .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .img-wrapper img {
+  transform: scale(1.04);
+}
+
+.project-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Lock System Buttons down to Grid Base */
+.plan-btn, .project-card .btn, .card .btn {
+  margin-top: auto !important;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   5. PREMIUM PRICING SUBSCRIPTION NODES (Linear App Clean Look)
+   ========================================================================== */
+.pricing-card h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: -0.03em;
+  text-align: left !important;
+}
+
+.plan-features {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.plan-features.open {
+  max-height: 350px;
+  opacity: 1;
+  margin-bottom: 16px;
+}
+
+.toggle-features-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 0;
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  outline: none;
+  width: max-content;
+}
+
+.toggle-features-btn i {
+  transition: transform 0.2s ease;
+}
+
+.toggle-features-btn.active i {
+  transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   6. SEAMLESS MARQUEE (Continuous Brand Infinite Scroll)
+   ========================================================================== */
+.marquee-section {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 24px 0 !important;
+}
+
+.marquee-wrapper {
+  display: flex;
+  gap: 80px;
+  width: max-content;
+  align-items: center;
+  animation: marquee-scroll 32s linear infinite;
+}
+
+.marquee-item {
+  white-space: nowrap;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   7. TECH CALCULATOR PLATFORM ARCHITECTURE
+   ========================================================================== */
+.calculator-section {
+  padding: 80px 8%;
+}
+
+.calc-container-box {
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+}
+
+.calc-container-box input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--card-light);
+  outline: none;
+  margin: 12px 0;
+}
+
+.calc-container-box input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--text-main);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.calc-container-box input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: var(--primary);
+}
+
+.calc-hr {
+  border: 0;
+  border-top: 1px solid var(--border-light) !important;
+}
+
+/* ==========================================================================
+   8. REAL-TIME INTERACTIVE TOAST MODALS & AUTOMATION FAQ
+   ========================================================================== */
+.modal-box-card {
+  animation: modal-slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  border-radius: var(--radius-lg);
+}
+
+@keyframes modal-slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Stripe/Linear Style Input Forms */
+.modal-form input, .modal-form textarea,
+.contact-box form input, .contact-box form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  outline: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.modal-form input:focus, .modal-form textarea:focus,
+.contact-box form input:focus, .contact-box form textarea:focus {
+  border-color: var(--text-main);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  background-color: var(--bg-surface);
+}
+
+/* Clean Minimal FAQ Accordion */
+.faq-item .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.faq-item.active {
+  border-color: var(--text-main) !important;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 150px;
+  opacity: 1;
+}
+
+.faq-item.active .faq-trigger i {
+  transform: rotate(45deg);
+}
+
+.faq-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   9. CORE PROCUREMENT ENDPOINTS (Contact Loop Matrix)
+   ========================================================================== */
+.contact {
+  padding: 120px 8% 80px 8%;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-info .info-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-info .info-box i {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  background: var(--card-light);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.contact-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   10. SYSTEM TELEMETRY CONTROLS & FOOTER LAYERS
+   ========================================================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #000000; /* Minimal Matt Black Floater */
+  color: #ffffff !important;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow-md);
+  z-index: 2000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+body.dark .whatsapp-float {
+  background-color: #ffffff;
+  color: #000000 !important;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px);
+  background-color: #25d366; /* Changes to classic code on mouse hover */
+  color: white !important;
+}
+
+footer {
+  padding: 32px 8%;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: var(--bg-primary);
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+footer .socials {
+  display: flex;
+  gap: 14px;
+}
+
+footer .socials a {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+footer .socials a:hover {
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   11. FLUID FLUID FLUID ENGINE (Sub-atomic Tech Breakpoints)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .service-grid, .stats-container, .pricing-grid, .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 968px) {
+  .navbar {
+    padding: 12px 6%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 61px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 61px);
+    background: var(--bg-primary);
+    backdrop-filter: var(--glass-blur);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 32px;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top: 1px solid var(--border-light);
+    z-index: 1400;
+  }
+  
+  .nav-links.active {
+    left: 0;
+  }
+  
+  .hamburger.toggle span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  
+  .hamburger.toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.toggle span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .hero-content h1, .about-hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1, .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .calc-container-box, .contact-box, .card, .stat-box, .project-card {
+    padding: 24px 16px;
+  }
+  
+  .project-content {
+    padding: 20px 16px;
+  }
+}
+
+/* ==========================================================================
+   12. MODULAR AI WORKSPACE CONSOLE (Silicon Valley Industry Standard)
+   ========================================================================== */
+
+/* 12.1 Floating Neon Brain Trigger Trigger Button */
+.ai-agent-trigger {
+  position: fixed;
+  bottom: 100px; /* Floating over WhatsApp button safely */
+  right: 30px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #ffffff !important;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm); /* Industrial square-smooth border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+  z-index: 2000;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.ai-agent-trigger:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.55);
+}
+
+/* 12.2 Premium Glassmorphic Floating Console Window */
+.ai-workspace-console {
+  position: fixed;
+  bottom: 165px;
+  right: 30px;
+  width: 380px;
+  height: 500px;
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  
+  /* Initial hidden state parameters for smooth animation */
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+/* JavaScript active interaction node switch */
+.ai-workspace-console.active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 12.3 Console Interface Header Layout */
+.console-header {
+  padding: 16px 20px;
+  background: var(--card-light);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.4s ease;
+}
+
+.console-header h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.01em;
+}
+
+/* Intermittent Pulse Engine Indicator */
+.console-header h4 span {
+  width: 8px;
+  height: 8px;
+  background-color: var(--success);
+  border-radius: 50%;
+  display: inline-block;
+  animation: telemetry-pulse 1.8s infinite;
+}
+
+@keyframes telemetry-pulse {
+  0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(18, 183, 106, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(18, 183, 106, 0); }
+  100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(18, 183, 106, 0); }
+}
+
+.close-console {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.close-console:hover {
+  color: var(--text-main);
+  transform: scale(1.1);
+}
+
+/* 12.4 Output Terminal Dataset Log Stream */
+.console-stream {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: transparent;
+}
+
+/* Sub-atomic nodes scrollbar profiling */
+.console-stream::-webkit-scrollbar {
+  width: 5px;
+}
+.console-stream::-webkit-scrollbar-track {
+  background: transparent;
+}
+.console-stream::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 10px;
+}
+
+/* Message Bubble Architecture Nodes */
+.msg-node {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  max-width: 85%;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  transition: var(--transition);
+}
+
+/* Server Automated Matrix Outbound Messages */
+.msg-node.system {
+  background-color: var(--card-light);
+  color: var(--text-main);
+  align-self: flex-start;
+  border: 1px solid var(--border-light);
+  border-bottom-left-radius: 4px; /* Classic chat bubble layout style */
+}
+
+.msg-node.system b {
+  color: var(--primary);
+}
+
+/* Client Inbound Prompt Message Bubble Layout */
+.msg-node.user {
+  background-color: var(--text-main);
+  color: var(--bg-primary);
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* 12.5 Command Bar Console Input Port */
+.console-input-bar {
+  padding: 14px 16px;
+  border-top: 1px solid var(--border-light);
+  background: var(--bg-surface);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.console-input-bar input {
+  flex-grow: 1;
+  padding: 10px 14px;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  outline: none;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.console-input-bar input:focus {
+  border-color: var(--text-main);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background-color: var(--bg-surface);
+}
+
+.console-input-bar button {
+  background-color: var(--text-main);
+  color: var(--bg-primary);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.console-input-bar button:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  transform: scale(1.02);
+}
+
+/* 12.6 Responsive Matrix Adaptations */
+@media (max-width: 480px) {
+  .ai-workspace-console {
+    width: calc(100% - 40px);
+    right: 20px;
+    left: 20px;
+    bottom: 155px;
+    height: 450px;
+  }
+  .ai-agent-trigger {
+    right: 20px;
+    bottom: 90px;
+  }
+}

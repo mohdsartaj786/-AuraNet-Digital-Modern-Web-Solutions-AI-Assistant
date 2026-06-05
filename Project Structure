@@ -1,0 +1,12 @@
+AuraNet Digital — Modern Web Solutions & AI Assistant
+├── public/
+│   ├── index.html          # Homepage with pricing and AI assistant
+│   ├── about.html          # About page
+│   ├── services.html       # Our services and capabilities
+│   ├── projects.html       # Portfolio showcase page
+│   ├── contact.html        # Contact page with forms
+│   ├── style.css           # Premium master stylesheet
+│   └── script.js           # Main JavaScript interactive logic
+├── server.js               # Node.js Express server configuration
+├── package.json            # Node project configuration
+└── README.md               # Project guide (this file)

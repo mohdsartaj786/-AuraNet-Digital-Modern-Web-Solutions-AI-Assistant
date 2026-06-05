@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AuraNet Digital - Enterprise-grade web development, advanced UI/UX design, and scalable software solutions.">
+  <title>AuraNet Digital | Enterprise Technology Solutions</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">AuraNet <span>Digital</span></div>
+  <ul class="nav-links" id="navLinks" aria-label="Main Navigation">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle Theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open Menu" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Engineering Next-Gen Digital Ecosystems</h1>
+    <p>We build high-performance, secure, and enterprise-grade software solutions for global startups and established corporations.</p>
+    <div class="hero-buttons">
+      <a href="services.html" class="btn">Our Capabilities</a>
+      <a href="projects.html" class="btn btn-outline">Explore Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-container">
+    <div class="stat-box"><h2>120+</h2><p>Global Deployments</p></div>
+    <div class="stat-box"><h2>80+</h2><p>Retention Rate %</p></div>
+    <div class="stat-box"><h2>5+</h2><p>Years of Innovation</p></div>
+    <div class="stat-box"><h2>24/7</h2><p>SLA Support</p></div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="section-title">
+    <h2>Transparent Pricing Architectural Plans</h2>
+    <p>Flexible engagement models tailored for scale and execution.</p>
+  </div>
+  
+  <div class="pricing-grid">
+    
+    <div class="pricing-card">
+      <h3>Startup Kit</h3>
+      <h2>$299 <span style="font-size: 1rem; color: var(--muted-light); font-weight: 400;">/ Fixed</span></h2>
+      <button class="toggle-features-btn" type="button"><span>View Architecture Specs</span> <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="plan-features">
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; padding-top: 15px;">
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> Custom Production Deployment</li>
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> 100% Responsive Architecture</li>
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> Fundamental SEO Semantics</li>
+          <li style="opacity: 0.4; text-decoration: line-through;"><i class="fa-solid fa-xmark" style="color: var(--error); margin-right: 8px;"></i> Cloud Infrastructure DevOps</li>
+        </ul>
+      </div>
+      <button class="btn plan-btn" data-plan="Startup Kit Plan">Deploy Solution</button>
+    </div>
+
+    <div class="pricing-card popular-card" style="border: 1px solid var(--primary); position: relative;">
+      <span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 2px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em;">ENTERPRISE CHOICE</span>
+      <h3>Growth Scale</h3>
+      <h2>$699 <span style="font-size: 1rem; color: var(--muted-light); font-weight: 400;">/ Hybrid</span></h2>
+      <button class="toggle-features-btn" type="button"><span>View Architecture Specs</span> <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="plan-features">
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; padding-top: 15px;">
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> Advanced Enterprise Multi-pages</li>
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> Premium UI/UX Interaction Systems</li>
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> Advanced Schema & SEO Tuning</li>
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> 30-Day DevOps SLA Support</li>
+        </ul>
+      </div>
+      <button class="btn plan-btn" data-plan="Growth Scale Plan">Deploy Solution</button>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Custom Ecosystem</h3>
+      <h2>$1499 <span style="font-size: 1rem; color: var(--muted-light); font-weight: 400;">/ Custom</span></h2>
+      <button class="toggle-features-btn" type="button"><span>View Architecture Specs</span> <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="plan-features">
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; padding-top: 15px;">
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> Dedicated Web Application</li>
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> Full E-Commerce Stack Architecture</li>
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> AWS/GCP DevOps Integration</li>
+          <li><i class="fa-solid fa-check" style="color: var(--success); margin-right: 8px;"></i> 180-Day Premium SLA Management</li>
+        </ul>
+      </div>
+      <button class="btn plan-btn" data-plan="Custom Ecosystem Plan">Deploy Solution</button>
+    </div>
+    
+  </div>
+</section>
+
+<div class="marquee-section">
+  <div class="marquee-wrapper">
+    <div class="marquee-item"><i class="fa-brands fa-aws"></i> AWS Enterprise</div>
+    <div class="marquee-item"><i class="fa-brands fa-stripe"></i> Stripe Pay</div>
+    <div class="marquee-item"><i class="fa-brands fa-digital-ocean"></i> Ocean Cloud</div>
+    <div class="marquee-item"><i class="fa-brands fa-shopify"></i> Shopify Plus</div>
+    <div class="marquee-item"><i class="fa-brands fa-cloudflare"></i> Cloudflare Core</div>
+    <div class="marquee-item"><i class="fa-brands fa-aws"></i> AWS Enterprise</div>
+    <div class="marquee-item"><i class="fa-brands fa-stripe"></i> Stripe Pay</div>
+    <div class="marquee-item"><i class="fa-brands fa-digital-ocean"></i> Ocean Cloud</div>
+    <div class="marquee-item"><i class="fa-brands fa-shopify"></i> Shopify Plus</div>
+    <div class="marquee-item"><i class="fa-brands fa-cloudflare"></i> Cloudflare Core</div>
+  </div>
+</div>
+
+<section class="calculator-section" id="estimator">
+  <div class="section-title">
+    <h2>Instant Project Budget Estimator</h2>
+    <p>Configure your technical requirements to generate a real-time deployment cost matrix.</p>
+  </div>
+  <div class="calc-container-box" style="max-width: 650px; margin: 0 auto; padding: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 25px; margin-bottom: 30px;">
+      <div>
+        <label style="font-weight: 700; display: flex; justify-content: space-between; margin-bottom: 10px;">
+          <span>Number of Platform Pages:</span>
+          <span id="pageValue" style="color: var(--primary);">1 Page</span>
+        </label>
+        <input type="range" id="calcPages" min="1" max="15" value="1" style="cursor: pointer;">
+      </div>
+      <label style="display: flex; align-items: center; gap: 12px; font-weight: 600; cursor: pointer;">
+        <input type="checkbox" id="calcApp" style="width: 20px; height: 20px;">
+        Include Cross-Platform Mobile App Deployment (+$500)
+      </label>
+      <label style="display: flex; align-items: center; gap: 12px; font-weight: 600; cursor: pointer;">
+        <input type="checkbox" id="calcSeo" style="width: 20px; height: 20px;">
+        Advanced Schema & Algorithm SEO Infrastructure (+$150)
+      </label>
+      <hr class="calc-hr">
+      <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(99, 102, 241, 0.1); padding: 20px; border-radius: 14px;">
+        <span style="font-weight: 700; font-size: 1.1rem;">Estimated Cost Matrix:</span>
+        <span id="calcTotal" style="font-size: 2rem; font-weight: 800; color: var(--primary);">$299</span>
+      </div>
+      <a href="contact.html" class="btn" style="text-align: center;">Lock This Estimation Quote</a>
+    </div>
+    <div style="text-align: center; padding-top: 30px;" class="calc-hr">
+      <p style="margin-bottom: 15px; font-weight: 600;">Want to see what we build first?</p>
+      <a href="projects.html" class="btn" style="background: linear-gradient(135deg, var(--primary), var(--accent)); padding: 14px 35px; width: 100%;">
+        Explore All 12 Production Architectures <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="tech-stack" id="stack">
+  <div class="section-title">
+    <h2>Our Core Engine Architecture</h2>
+    <p>We deploy standard enterprise-grade components to keep system runtime sub-atomic.</p>
+  </div>
+  <div class="service-grid">
+    <div class="card">
+      <div class="icon"><i class="fa-brands fa-react"></i></div>
+      <h3>Reactive UI Nodes</h3>
+      <p>Building with highly optimized React components, Virtual DOM rendering layers, and synchronous atomic states.</p>
+    </div>
+    <div class="card">
+      <div class="icon"><i class="fa-brands fa-node-js"></i></div>
+      <h3>Asynchronous Backroutes</h3>
+      <p>Deploying non-blocking secure I/O operations via Node.js runtime layers to distribute concurrent dataset flows safely.</p>
+    </div>
+    <div class="card">
+      <div class="icon"><i class="fa-solid fa-terminal"></i></div>
+      <h3>Computational Systems</h3>
+      <p>Utilizing high-speed deterministic backend processing using strict data structures and C++ optimization frameworks.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="reviews">
+  <div class="section-title">
+    <h2>Client Testimonials</h2>
+    <p>Trusted by operators and tech founders worldwide.</p>
+  </div>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <p>“AuraNet delivered our enterprise architecture 4 days ahead of schedule. Their frontend modularity is exceptionally clean.”</p>
+      <h4>— Marcus Vance</h4>
+      <span style="font-size: 0.85rem; opacity: 0.7;">CTO, NexusFintech Corp</span>
+    </div>
+    <div class="testimonial-card">
+      <p>“The dynamic state controls and cloud DevOps orchestration optimized our core application load speeds by 40%.”</p>
+      <h4>— Sophia Dubois</h4>
+      <span style="font-size: 0.85rem; opacity: 0.7;">Director of Product, CloudScale Inc</span>
+    </div>
+    <div class="testimonial-card">
+      <p>“Absolute precision in UI engineering. Their implementation of GPU canvas math gave our dashboard a distinct edge.”</p>
+      <h4>— Rohan Mehta</h4>
+      <span style="font-size: 0.85rem; opacity: 0.7;">Founder, Metaserve India</span>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="section-title">
+    <h2>Frequently Answered Frameworks</h2>
+    <p>Everything you need to know about our engineering and deployment cycles.</p>
+  </div>
+  <div class="faq-container" style="max-width: 750px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+    <div class="faq-item card">
+      <div class="faq-trigger">
+        <span>What is the standard turnaround deployment time?</span>
+        <i class="fa-solid fa-plus"></i>
+      </div>
+      <div class="faq-answer">
+        <p style="padding-top: 15px; line-height: 1.6;">Our Startup Kit plans deploy within 5–7 operational business days. Growth Scale systems scale between 14 to 30 operational days depending on stack complexity.</p>
+      </div>
+    </div>
+    <div class="faq-item card">
+      <div class="faq-trigger">
+        <span>Do you provide source-code repository access?</span>
+        <i class="fa-solid fa-plus"></i>
+      </div>
+      <div class="faq-answer">
+        <p style="padding-top: 15px; line-height: 1.6;">Yes, 100%. Once project clearances are executed, complete ownership and GitHub enterprise repositories are securely transferred directly to your ecosystem systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- जोड़ा गया हिस्सा: HIGH-LEVEL AI AGENT INTERACTIVE COMPONENT -->
+<div class="ai-agent-trigger" id="aiAgentBtn" title="Launch Core AI Agent">
+  <i class="fa-solid fa-brain"></i>
+</div>
+
+<div class="ai-workspace-console" id="aiConsole">
+  <div class="console-header">
+    <h4><span></span> AuraNet Core AI Engine</h4>
+    <button class="close-console" id="closeConsole"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="console-stream" id="consoleStream">
+    <div class="msg-node system">
+      System initialized. Hello! I am the AuraNet Project Engine. Type <b>"Startup"</b>, <b>"Growth"</b>, or <b>"Custom"</b> to instantly load and configure an architecture preview matrix.
+    </div>
+  </div>
+  <div class="console-input-bar">
+    <input type="text" id="consoleInput" placeholder="Send prompt loop..." autocomplete="off">
+    <button id="sendConsoleBtn"><i class="fa-solid fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<!-- व्हाट्सएप फ्लोटिंग बटन -->
+<a href="https://wa.me/917309130230?text=Hello%20AuraNet%20Digital,%20I%20want%20to%20discuss%20an%20enterprise%20solution." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<footer>
+  <p>© 2026 AuraNet Digital. All Rights Reserved.</p>
+  <div class="socials">
+    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
